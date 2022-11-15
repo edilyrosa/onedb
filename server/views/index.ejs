@@ -87,8 +87,8 @@
                 <td> <%= student.namelevel %> </td>
                 <td>
                     <a href="/create" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle'></i></a>
+                    <a href="/edit/<%= student.id %>" class="btn btn-outline-primary mt-4"><i class='bx bx-edit-alt'></i></a>
                     <a href="/delete" class="btn btn-outline-primary mt-4"><i class='bx bxs-message-alt-x'></i></a>
-                    <a href="/update" class="btn btn-outline-primary mt-4"><i class='bx bx-edit-alt'></i></a>
                 </td>
             </tr>
         <% }) %>

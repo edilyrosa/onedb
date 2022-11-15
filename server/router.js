@@ -2,6 +2,37 @@ const express = require('express')
 const router = express.Router()
 const conexion = require('./database/db')
 
+
+
+//!This query does the POST to Student's table, filling it.
+router.get('/create', (req, res)=>{
+    conexion.query("SELECT * FROM student", (error, results)=>{
+        if(error){
+            throw error
+        } else {
+           res.render('create', {results:results})
+        }
+    })
+})
+
+
+//!This query does the PUT to Student's table, update it.
+router.get('/edit/:id', (req, res)=>{
+   const id = req.params.id
+    conexion.query("SELECT * FROM student WHERE id=?", [id], (error, results)=>{
+        if(error){
+            throw error
+        } else {
+           res.render('edit', {student:results[0]})
+        }
+    })
+})
+
+
+
+
+
+
 //!This query get all the student's register from 3 different tabls
 router.get('/', (req, res)=>{
      conexion.query(
@@ -40,19 +71,9 @@ router.get('/grade', (req, res)=>{
 
 
 
-//!This query does the POST to Student's table, filling it.
-router.get('/create', (req, res)=>{
-    conexion.query("SELECT * from student", (error, results)=>{
-        if(error){
-            throw error
-        } else {
-           res.render('create', {results:results})
-        }
-    })
-})
-
 
 const crud = require('./controllers/crud')
 router.post('/save', crud.save)
+router.post('/update', crud.update)
 
 module.exports= router
