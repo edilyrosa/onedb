@@ -1,178 +1,20 @@
-form * {
-    margin: 0.2rem;
-    padding: 0.2rem;
-  }
-  form {
-    padding: 0.5rem;
-    border: 1px solid rgb(69, 12, 215);
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .searchId {
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  textarea {
-    border: medium solid rgb(31, 12, 129);
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin-right: 1rem;
-    margin-left: 0.1rem;
-    outline: none;
-    display: block;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 1;
-    background-color: white;
-    font-family: inherit;
-  }
-  
-  button,
-  input[type="submit"],
-  input[type="reset"] {
-    border: medium solid rgb(10, 20, 131);
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem 0 0;
-    display: inline-block;
-    background-color: #eee;
-    color: #444;
-    font-weight: bold;
-    line-height: 1;
-    text-transform: none;
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 1.5rem;
-  }
-  
-  .butForm button,
-  input[type="submit"],
-  input[type="reset"] {
-    font-size: 2rem;
-    width: 20%;
-    height: 4rem;
-    margin-left: auto;
-  }
-  
-  hr {
-    margin: 2rem auto;
-  }
-  
-  table {
-    border-spacing: 0;
-    border-collapse: collapse;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  th,
-  td {
-    text-align: center;
-    padding: 0.5rem;
-    border-bottom: thin solid #dedede;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .grid-1-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: start;
-      gap: 2rem;
-    }
-  }
-  
-  .divForm {
-    padding-top: 10px;
-  }
-  
-  select {
-    width: 70%;
-    height: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: block;
-    background-color: white;
-    border: medium solid rgb(29, 15, 113);
-    font-family: inherit;
-    font-size: 2rem;
-  }
-  
-  input[type="checkbox"] {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: block;
-    background-color: transparent;
-    border: medium solid rgb(9, 7, 116);
-    box-shadow: 0 0 10px hotpink;
-  }
-  
-  input[type="checkbox"]:hover {
-    transition: 1s;
-    transform: rotate(360deg);
-  }
-  
-  input[type="date"],
-  input[type="number"] {
-    display: block;
-    border: medium solid rgb(153, 143, 188);
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  input[type="submit"] {
-    margin-left: 30%;
-  }
-  
-  .damaged {
-    color: red;
-  }
-  
+
+body{
+  margin: 1rem;
+}
   h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: rgb(7, 7, 153);
     max-width: 100%;
-    font-size: 4rem;
+    font-size:4rem;
   }
   
   h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: rgb(15, 6, 82);
     max-width: 100%;
     font-size: 3rem;
   }
   
-  h3 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 100;
-    color: var(--primary-color);
-  }
+
   
-  p {
-    text-align: justify;
-    font-size: 1rem;
-    overflow: auto;
-    color: var(--primary-color);
-  }
-  .sonAssets2 {
-    color: red;
-  }

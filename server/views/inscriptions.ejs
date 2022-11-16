@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css"> 
+    <title>Student's Inscription</title>
+    <style>
+
+
+      body{
+        margin: 1rem;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+        h1 {
+          text-align: center;
+          color: rgb(7, 7, 153);
+          max-width: 100%;
+          font-size:4rem;
+        }
+        
+        h2 {
+          text-align: center;
+          color: rgb(15, 6, 82);
+          max-width: 100%;
+          font-size: 3rem;
+        }
+      
+        a{
+          text-align: center;
+          max-width: 100%;
+          font-size: 2rem;
+          display: block;
+      
+        }
+      
+          </style>
+  </head>
+  <body>
+
+    <!-- header  -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <h1>Student's Inscription 📝</h1>
+        </div>
+    </nav>
+    <h2>Now you will be one of us!! 🚀🚀🚀</h2>
+
+   
+  
+        <!-- Form  -->
+
+        <div class="container mt-4">
+
+        
+        <form action="/saveInscripcion" method="POST">
+
+            <div class="mb-3">
+                
+                
+                <label for="id_student" class="form-label center">Student's ID</label>
+                <input type="text" class="form-control" id="id_student" name="id_student" placeholder="Write the ID">
+                
+                <br>
+                <select class="form-select" id="id_course" name="id_course" aria-label="Default select example">
+                    <option selected>Course </option>
+                    <option value="1">English</option>
+                    <option value="2">French</option>
+                    <option value="3">Italian</option>
+                  </select>
+
+                <br>
+
+                <select class="form-select" id="id_level" name="id_level" aria-label="Default select example">
+                    <option selected>Level </option>
+                    <option value="1">Beginner</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Advanced</option>
+                  </select>
+
+                  <br>
+
+                
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit" tabindex="5">
+            <a href="/students" class="btn btn-secondary">Cancel</a>
+        </form>
+
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+  </html>
