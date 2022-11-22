@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <title>Log's List</title>
+    <title>Enrollment</title>
   </head>
   <style>
     body{
@@ -40,7 +40,7 @@
     <!-- header  -->
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./inscriptions">Student's Enrollment ✍️📑</a>
+          <a class="navbar-brand" href="gradeform">Putting Students' Grade.</a>
           <a class="navbar-brand" href="reportStudents">Students' Report.</a>
           <a class="navbar-brand" href="gradereport">Students' Grade.</a>
           <a class="navbar-brand" href="formSingleStudent">Student's Report.</a>
@@ -48,7 +48,7 @@
         </div>
       </nav>
 
-      <h1>Log's Report 🗃️</h1>
+      <h1>Student's Enrollment ✍️📑</h1>
 <!-- table  -->
       <div class="container">
 
@@ -57,7 +57,7 @@
 
     <thead>
         <tr class="bg-primary-text-white">
-            <th scope="col">ID</th>
+            <th scope="col">Student's ID</th>
             <th scope="col">Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">DNI</th>
@@ -66,7 +66,9 @@
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
             <th scope="col">Address</th>
-            <th scope="col">Acction</th>
+            <th scope="col">Course</th>
+            <th scope="col">Level</th>
+            <th scope="col">Enrrollment's ID</th>
         </tr>
     </thead>
 
@@ -82,11 +84,9 @@
                 <td> <%= student.phone %> </td>
                 <td> <%= student.email %> </td>
                 <td> <%= student.address %> </td>
-                <td>
-                  <a href="/students" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle'></i></a>
-                  <a href="/editstudents/<%= student.id %>" class="btn btn-outline-primary mt-4"><i class='bx bx-edit-alt'></i></a>
-                  <a href="/delete" class="btn btn-outline-primary mt-4"><i class='bx bxs-message-alt-x'></i></a>
-              </td>
+                <td> <%= student.namecourse %> </td>
+                <td> <%= student.namelevel %> </td>
+                <td> <%= student.id_inscription %> </td>
             </tr>
         <% }) %>
     </tbody>

@@ -41,8 +41,8 @@
     <!-- header  -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Grafica curso-studiantes</a>
         <a class="navbar-brand" href="reportStudents">Students' Report.</a>
+        <a class="navbar-brand" href="formSingleStudent">Student's Report.</a>
         <a class="navbar-brand" href="students">Log a friend.</a>
         <a class="navbar-brand" href="studentstable">Log List.</a>
       
@@ -60,10 +60,12 @@
 
     <thead>
         <tr class="bg-primary-text-white">
-            <th scope="col">ID</th>
+            <th scope="col">Student's ID</th>
             <th scope="col">Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">DNI</th>
+            <th scope="col">Course</th>
+            <th scope="col">Level</th>
             <th scope="col">Grade</th>
         </tr>
     </thead>
@@ -71,12 +73,13 @@
     <tbody>
         <% results.forEach((student)=>{ %>
             <tr>
-           
                 <td> <%= student.id %> </td>
                 <td> <%= student.name %> </td>
                 <td> <%= student.lastname %> </td>
                 <td> <%= student.DNI %> </td>
-                <td> <%= student.finalgrade %> </td>
+                <td> <%= student.course %> </td>
+                <td> <%= student.level %> </td>
+                <td> <%= student.grade %> </td>
             </tr>
         <% }) %>
     </tbody>
