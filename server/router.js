@@ -67,6 +67,21 @@ router.get('/editstudents/:id', (req, res)=>{
     })
 })
 
+
+//!This query does the DELETE to Student's table, update it.
+router.get('/delete/:id', (req, res)=>{
+    const id = req.params.id
+     conexion.query("DELETE FROM students WHERE id=?", [id], (error, results)=>{
+         if(error){
+             throw error
+         } else {
+            res.redirect("http://localhost:5000/studentstable")
+         }
+     })
+ })
+ 
+
+
 //!This query get the specific student's register (from 4 different tabls: students, courses, levels, inscriptions).
 router.get('/singleStudent/:id', (req, res)=>{ 
     const id = req.params.id
